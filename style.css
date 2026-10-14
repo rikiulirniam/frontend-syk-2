@@ -1,0 +1,32 @@
+/* Font override */
+*{
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+h1,
+h2,
+h3,
+.font-heading {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* outline burger menu */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #4F46E5;
+  outline-offset: 2px;
+}
+
+.hamburger-line {
+  display: block;
+  width: 28px;
+  height: 2.5px;
+  background-color: #1f2937;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: center;
+}

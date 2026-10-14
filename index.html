@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="pageTitle">Fira — Portfolio</title>
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#4F46E5",
+            "primary-dark": "#4338CA"
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet">
+
+  <!-- Link CSS External -->
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <!-- Navbar -->
+
+  <header class="fixed top-0 inset-x-0 z-50 bg-white/90 backdrop-blur border-b border-gray-100">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8 h-16 flex items-center justify-between">
+
+      <!-- Logo Navbar -->
+      <a href="#home" class="font-heading font-bold text-lg text-gray-900"><span id="navName">Fira</span><span class="text-primary">.</span></a>
+
+      <!-- Menu navigasi Desktop -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+        <a href="#about" class="hover:text-primary transition">Tentang</a>
+        <a href="#experience" class="hover:text-primary transition">Pengalaman</a>
+        <a href="#skills" class="hover:text-primary transition">Skills</a>
+        <a href="#projects" class="hover:text-primary transition">Projects</a>
+        <a href="#contact" class="hover:text-primary transition">Kontak</a>
+      </nav>
+
+      <!-- Tombol download resume, versi desktop -->
+      <div class="hidden md:block">
+        <a href="assets/CV_Shafira Hasna Fauzi_Software_Multimedia.pdf" download
+          class="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white text-sm font-medium px-4 py-2 rounded-lg transition">
+          Download Resume
+        </a>
+      </div>
+
+      <!-- Tombol hamburger -->
+      <button id="menuBtn"
+        class="md:hidden w-7 h-7 flex flex-col justify-center items-center gap-1.5 focus:outline-none"
+        aria-label="Toggle Menu" aria-expanded="false">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+
+    <!-- Menu navigasi Mobile -->
+    <nav id="mobileMenu"
+      class="hidden md:hidden flex-col gap-1 px-5 pb-4 text-sm font-medium bg-white border-t border-gray-100">
+      <a href="#about" class="block py-2">Tentang</a>
+      <a href="#experience" class="block py-2">Pengalaman</a>
+      <a href="#skills" class="block py-2">Skills</a>
+      <a href="#projects" class="block py-2">Projects</a>
+      <a href="#contact" class="block py-2">Kontak</a>
+      <a href="assets/CV_Shafira Hasna Fauzi_Software_Multimedia.pdf" download
+        class="block py-2 text-primary font-semibold">Download Resume</a>
+    </nav>
+  </header>
+
+  <main class="pt-16">
+
+    <!-- Hero section -->
+
+    <section id="home" class="max-w-6xl mx-auto px-5 sm:px-8 py-20 sm:py-28 grid sm:grid-cols-2 gap-10 items-center">
+      <div>
+        <p class="text-primary font-medium mb-3">Halo 👋</p>
+        <h1 class="font-heading text-4xl sm:text-5xl font-bold text-gray-900 leading-tight mb-4">
+          <span id="heroName">Fira </span> —<br><span id="heroTitle" class="text-gray-700">Frontend Developer</span>
+        </h1>
+        <p id="heroMotto" class="text-gray-500 text-base sm:text-lg mb-8 max-w-md">
+          Membangun aplikasi web dan sistem sederhana dari kuliah, organisasi, hingga proyek pribadi.
+        </p>
+
+        <!-- Tombol Download cv dan ke project -->
+        <div class="flex flex-wrap gap-3">
+          <a href="assets/CV_Shafira Hasna Fauzi_Software_Multimedia.pdf" download
+            class="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white text-sm font-medium px-5 py-3 rounded-lg transition">
+            Download Resume
+          </a>
+          <a href="#projects"
+            class="inline-flex items-center gap-2 border border-gray-200 hover:border-primary hover:text-primary text-sm font-medium px-5 py-3 rounded-lg transition">
+            Lihat Projects
+          </a>
+        </div>
+      </div>
+
+      <!-- foto profil-->
+      <div class="rounded-2xl aspect-square flex items-center justify-center text-gray-400 text-sm overflow-hidden shadow-sm">
+        <img id="profileImage" src="assets/profil.png" class="w-full h-full object-cover rounded-xl transition duration-300 hover:scale-105" alt="Foto Profil">
+      </div>
+    </section>
+
+    <!-- About section -->
+    <section id="about" class="bg-gray-50 py-20">
+      <div class="max-w-4xl mx-auto px-5 sm:px-8 text-center">
+        <h2 class="font-heading text-3xl font-bold text-gray-900 mb-4">Tentang Saya</h2>
+        <p id="aboutText" class="text-gray-500 leading-relaxed whitespace-pre-line">
+          Saya mahasiswa D3 Teknik Informatika di Politeknik Negeri Semarang, aktif membangun proyek
+          full-stack dan terlibat di organisasi kampus seperti PCC (Politeknik Computer Club).
+          Tertarik pada pengembangan web, sistem database, dan otomatisasi.
+        </p>
+      </div>
+    </section>
+
+    <!-- Experience section -->
+
+    <section id="experience" class="py-20">
+      <div class="max-w-3xl mx-auto px-5 sm:px-8">
+        <h2 class="font-heading text-3xl font-bold text-gray-900 mb-2 text-center">Pengalaman</h2>
+        <p class="text-gray-500 text-center mb-12">Perjalanan singkat di organisasi dan program studi</p>
+        <ol id="experienceList" class="relative border-l-2 border-gray-200 ml-3">
+
+          <!-- Item 1 -->
+          <li class="mb-10 ml-6">
+            <span
+              class="absolute -left-[9px] flex items-center justify-center w-4 h-4 bg-primary rounded-full ring-4 ring-white"></span>
+            <p class="text-xs text-gray-400 mb-1">2021 - 2024</p>
+            <h3 class="font-heading font-semibold text-gray-900">SMK 8 Semarang</h3>
+            <p class="text-gray-500 text-sm mt-1">
+              Saya bersekolah di SMK 8 Semarang Jurusan PPLG.
+            </p>
+          </li>
+
+          <!-- Item 2 -->
+          <li class="mb-10 ml-6">
+            <span
+              class="absolute -left-[9px] flex items-center justify-center w-4 h-4 bg-primary rounded-full ring-4 ring-white"></span>
+            <p class="text-xs text-gray-400 mb-1">2025 — Sekarang</p>
+            <h3 class="font-heading font-semibold text-gray-900">Politeknik Negeri Semarang</h3>
+            <p class="text-gray-500 text-sm mt-1">
+              Kuliah di jurusan Teknik Elektro di prodi D3- Teknik Informatika.
+            </p>
+          </li>
+
+          <!-- Item 3 — slot kosong, tinggal isi pengalaman lain (magang/lomba/dll) -->
+          <li class="ml-6">
+            <span
+              class="absolute -left-[9px] flex items-center justify-center w-4 h-4 bg-primary rounded-full ring-4 ring-white"></span>
+            <p class="text-xs text-gray-400 mb-1">[Tahun]</p>
+            <h3 class="font-heading font-semibold text-gray-900">[Tambahkan pengalaman lain]</h3>
+            <p class="text-gray-500 text-sm mt-1">
+              [Deskripsi singkat — magang, lomba, orginasi, dsb.]
+            </p>
+          </li>
+
+        </ol>
+      </div>
+    </section>
+    <!-- Skills section -->
+
+    <section id="skills" class="bg-gray-50 py-20">
+      <div class="max-w-4xl mx-auto px-5 sm:px-8 text-center">
+        <h2 class="font-heading text-3xl font-bold text-gray-900 mb-10">Skills</h2>
+
+        <div id="skillList" class="flex flex-wrap justify-center gap-3">
+          <span class="px-4 py-2 rounded-full bg-gray-100 text-gray-700 text-sm font-medium">Java</span>
+          <span class="px-4 py-2 rounded-full bg-gray-100 text-gray-700 text-sm font-medium">JavaScript</span>
+          <span class="px-4 py-2 rounded-full bg-gray-100 text-gray-700 text-sm font-medium">TypeScript</span>
+          <span class="px-4 py-2 rounded-full bg-gray-100 text-gray-700 text-sm font-medium">HTML &amp; CSS</span>
+          <span class="px-4 py-2 rounded-full bg-gray-100 text-gray-700 text-sm font-medium">Tailwind CSS</span>
+          <span class="px-4 py-2 rounded-full bg-gray-100 text-gray-700 text-sm font-medium">Next.js</span>
+          <span class="px-4 py-2 rounded-full bg-gray-100 text-gray-700 text-sm font-medium">MongoDB</span>
+          <span class="px-4 py-2 rounded-full bg-gray-100 text-gray-700 text-sm font-medium">Google Apps Script</span>
+          <span class="px-4 py-2 rounded-full bg-gray-100 text-gray-700 text-sm font-medium">Git</span>
+          <span class="px-4 py-2 rounded-full bg-gray-100 text-gray-700 text-sm font-medium">Bisa Roam</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects section -->
+
+    <section id="projects" class="py-20">
+      <div class="max-w-6xl mx-auto px-5 sm:px-8">
+        <h2 class="font-heading text-3xl font-bold text-gray-900 mb-10 text-center">Projects</h2>
+
+        <div id="projectList" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          <!-- Card project 1 -->
+          <article
+            class="bg-white border border-gray-100 rounded-2xl p-5 transition duration-200 ease-in-out hover:shadow-[0_10px_25px_-10px_rgba(0,0,0,0.15)] hover:-translate-y-0.5">
+            <div
+              class="bg-gray-200 rounded-xl aspect-video mb-4 flex items-center justify-center text-gray-400 text-xs">
+              Gambar / screenshot
+            </div>
+            <h3 class="font-heading font-semibold text-lg text-gray-900 mb-1">Website Organisasi</h3>
+            <p class="text-gray-500 text-sm mb-3">Halaman struktur organisasi interaktif memakai Next.js dan React Flow.
+            </p>
+          </article>
+
+          <!-- Card project 2 -->
+          <article
+            class="bg-white border border-gray-100 rounded-2xl p-5 transition duration-200 ease-in-out hover:shadow-[0_10px_25px_-10px_rgba(0,0,0,0.15)] hover:-translate-y-0.5">
+            <div
+              class="bg-gray-200 rounded-xl aspect-video mb-4 flex items-center justify-center text-gray-400 text-xs">
+              Gambar / screenshot
+            </div>
+            <h3 class="font-heading font-semibold text-lg text-gray-900 mb-1">Productivity Dashboard</h3>
+            <p class="text-gray-500 text-sm mb-3">Dashboard produktivitas terhubung Google Sheets dengan visualisasi
+              grafik.</p>
+          </article>
+
+          <!-- Card project 3 (placeholder, ganti sesuai project kamu) -->
+          <article
+            class="bg-white border border-gray-100 rounded-2xl p-5 transition duration-200 ease-in-out hover:shadow-[0_10px_25px_-10px_rgba(0,0,0,0.15)] hover:-translate-y-0.5">
+            <div
+              class="bg-gray-200 rounded-xl aspect-video mb-4 flex items-center justify-center text-gray-400 text-xs">
+              <img src="assets/project.jpeg" alt="Screenshot Nama Project"
+                class="w-full h-full object-cover rounded-xl">
+            </div>
+            <h3 class="font-heading font-semibold text-lg text-gray-900 mb-1">Nama Project Kamu</h3>
+            <p class="text-gray-500 text-sm mb-3">Ganti dengan deskripsi singkat: masalah apa yang diselesaikan.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <!-- Footer -->
+
+  <footer id="contact" class="bg-gray-900 text-gray-300 pt-16 pb-8">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8">
+
+      <div class="grid sm:grid-cols-3 gap-10 pb-12 border-b border-gray-800">
+
+        <!-- Kolom 1: nama & tagline -->
+        <div>
+          <p class="font-heading font-bold text-xl text-white mb-3"><span id="footerName">Fira</span><span class="text-blue-500">.</span></p>
+          <p id="footerMotto" class="text-gray-400 text-sm leading-relaxed max-w-xs">
+            Terbuka untuk kolaborasi, magang, atau sekadar diskusi seputar teknologi.
+          </p>
+        </div>
+
+        <!-- Kolom 2: link navigasi  -->
+        <div>
+          <p class="text-white text-sm font-semibold mb-4">Navigasi</p>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#about" class="text-gray-400 hover:text-blue-400 transition">Tentang</a></li>
+            <li><a href="#experience" class="text-gray-400 hover:text-blue-400 transition">Pengalaman</a></li>
+            <li><a href="#projects" class="text-gray-400 hover:text-blue-400 transition">Projects</a></li>
+          </ul>
+        </div>
+
+        <!-- Kolom 3: link kontak -->
+        <div>
+          <p class="text-white text-sm font-semibold mb-4">Kontak</p>
+          <ul class="space-y-2 text-sm">
+            <li><a id="contactWhatsapp" href="https://wa.me/6281234567890" target="_blank" rel="noopener"
+                class="text-gray-400 hover:text-blue-400 transition inline-flex items-center gap-2">WhatsApp</a></li>
+            <li><a id="contactLinkedin" href="https://linkedin.com/in/username-kamu" target="_blank" rel="noopener"
+                class="text-gray-400 hover:text-blue-400 transition inline-flex items-center gap-2">LinkedIn</a></li>
+            <li><a id="contactEmail" href="mailto:email@example.com" target="_blank" rel="noopener"
+                class="text-gray-400 hover:text-blue-400 transition inline-flex items-center gap-2">Email</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <p class="text-gray-500 text-xs text-center pt-6">© <span id="year">2026</span> <span id="footerCopyrightName">Fira</span>. Dibuat dengan Tailwind CSS.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Link Javascript External -->
+  <script src="script.js"></script>
+</body>
+
+</html>
